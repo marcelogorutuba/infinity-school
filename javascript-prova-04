@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lista de Compras</title>
+  </head>
+  <body>
+    <script>
+      let listaDeCompras = [];
+
+      function adicionarItem() {
+        let item = prompt("Digite o nome do item que deseja adicionar:");
+
+        if (item) {
+          listaDeCompras.push(item);
+          console.log(`"${item}" foi adicionado à lista.`);
+        } else {
+          console.log("Item inválido.");
+        }
+      }
+
+      function removerItem() {
+        exibirLista();
+
+        let indice = parseInt(
+          prompt("Digite o índice do item que deseja remover:"),
+        );
+
+        if (!isNaN(indice) && indice >= 0 && indice < listaDeCompras.length) {
+          let itemRemovido = listaDeCompras.splice(indice, 1);
+          console.log(`"${itemRemovido}" foi removido da lista.`);
+        } else {
+          console.log("Índice inválido.");
+        }
+      }
+
+      function atualizarItem() {
+        exibirLista();
+
+        let indice = parseInt(
+          prompt("Digite o índice do item que deseja atualizar:"),
+        );
+
+        if (!isNaN(indice) && indice >= 0 && indice < listaDeCompras.length) {
+          let novoValor = prompt("Digite o novo valor do item:");
+
+          if (novoValor) {
+            listaDeCompras[indice] = novoValor;
+            console.log("Item atualizado com sucesso.");
+          } else {
+            console.log("Valor inválido.");
+          }
+        } else {
+          console.log("Índice inválido.");
+        }
+      }
+
+      function exibirLista() {
+        console.log("\nLista de Compras:");
+
+        if (listaDeCompras.length === 0) {
+          console.log("A lista está vazia.");
+        } else {
+          let indice = 0;
+          for (let item of listaDeCompras) {
+            console.log(`${indice} - ${item}`);
+            indice++;
+          }
+        }
+      }
+
+      function menu() {
+        let opcao;
+
+        do {
+          opcao = prompt(
+            "\Lista de Compras\n" +
+              "1 - Adicionar item\n" +
+              "2 - Remover item\n" +
+              "3 - Atualizar item\n" +
+              "4 - Exibir lista\n" +
+              "0 - Sair\n" +
+              "Escolha uma opção:",
+          );
+
+          switch (opcao) {
+            case "1":
+              adicionarItem();
+              break;
+            case "2":
+              removerItem();
+              break;
+            case "3":
+              atualizarItem();
+              break;
+            case "4":
+              exibirLista();
+              break;
+            case "0":
+              console.log("Encerrando o programa...");
+              break;
+            default:
+              console.log("Opção inválida.");
+          }
+        } while (opcao !== "0");
+      }
+
+      menu();
+    </script>
+  </body>
+</html>
