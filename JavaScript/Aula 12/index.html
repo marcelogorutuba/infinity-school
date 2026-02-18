@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #f0f8ff, #dfe9f3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+        color: #333;
+      }
+
+      div {
+        margin-bottom: 15px;
+        width: 100%;
+        max-width: 320px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #0056b3;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #007bff;
+        border-radius: 6px;
+        box-sizing: border-box;
+        background-color: #e6f0ff;
+        color: #000;
+        font-size: 14px;
+      }
+
+      input:read-only {
+        background-color: #f2f2f2;
+        color: #555;
+      }
+
+      button {
+        padding: 12px 24px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div>
+      <label for="">CEP</label>
+      <input type="number" id="cep" />
+    </div>
+
+    <div>
+      <label for="">Rua</label>
+      <input type="text" id="rua" readonly />
+    </div>
+
+    <div>
+      <label for="">Cidade</label>
+      <input type="text" id="city" readonly />
+    </div>
+
+    <div>
+      <label for="">Estado</label>
+      <input type="text" id="uf" readonly />
+    </div>
+    
+    <button id="botao" onclick="carregarCEP()">Buscar CEP</button>
+
+    <script>0
+      const ruaIput = document.querySelector("#rua");
+      const cityIput = document.querySelector("#city");
+      const UFIput = document.querySelector("#uf");
+
+      async function carregarCEP() {
+        const cepInput = document.querySelector("#cep").value 
+        const url = `https://viacep.com.br/ws/${cepInput}/json/`;
+        const response = await fetch(url);
+        const data = await response.json();
+        ruaIput.value = data.logradouro
+        cityIput.value = data.localidade
+        UFIput.value = data.uf
+        console.log(data);
+      }
+    </script>
+  </body>
+</html>

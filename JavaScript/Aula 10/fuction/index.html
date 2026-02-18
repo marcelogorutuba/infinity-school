@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- Crie uma lógica que ligue e desligue a lampada conforme o mouse passar em cima dela.
+        - Se ela estiver ligada, desligue
+        - se ela estiver desligada, ligue  
+    -->
+    <img id="lampada" src="https://fernandoleonid.github.io/mini-projetos-js/01-lamp/img/desligada.jpg" 
+    onmouseenter="acender()"
+    onmouseleave="apagar()"
+    />
+    
+    <script>
+      function acender(){
+            // primeiro passo  -> pegar o elemento
+            let imagem = document.getElementById('lampada')
+            // segundo passo -> alterar o source
+
+            imagem.src = "https://fernandoleonid.github.io/mini-projetos-js/01-lamp/img/ligada.jpg"
+        }
+
+
+
+        function apagar(){
+            // primeiro passo  -> pegar o elemento
+            let imagem = document.getElementById('lampada')
+            // segundo passo -> alterar o source
+
+            imagem.src = "https://fernandoleonid.github.io/mini-projetos-js/01-lamp/img/desligada.jpg"
+        }
+  
+
+    </script>
+</body>
+</html>
+
+<!--"https://fernandoleonid.github.io/mini-projetos-js/01-lamp/img/desligada.jpg"
+"https://fernandoleonid.github.io/mini-projetos-js/01-lamp/img/ligada.jpg"

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nome" placeholder="Digite seu nome:">
+
+    <button id="botao" onclick="CadastrarUsuario()">Cadastrar</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        let usuarios = ["Gabriel"]
+        const inputNome = document.getElementById("nome") 
+        const resultado = document.getElementById("resultado")
+        
+        function CadastrarUsuario() {
+            let nome = inputNome.value.trim()
+            if (nome) {
+                usuarios.push(nome)
+                mostrarUsuarios()
+                inputNome.value = ""
+                inputNome.focus()
+            }
+        }
+
+        function mostrarUsuarios() {
+            resultado.innerHTML = ""
+            usuarios.forEach((usuario, index) => {
+                resultado.innerHTML += `
+                    <li>
+                        ${usuario} 
+                        <button onclick="excluirUsuario(${index})">Excluir</button>
+                    </li>`
+            })
+        }
+
+        function excluirUsuario(index) {
+            usuarios.splice(index, 1) // Remove 1 item a partir do índice
+            mostrarUsuarios()
+        }
+
+        mostrarUsuarios()
+    </script>
+</body>
+</html>

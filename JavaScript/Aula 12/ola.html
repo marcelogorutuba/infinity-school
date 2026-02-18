@@ -1,0 +1,10 @@
+const ruaIput = document.querySelector("#rua");
+
+      const cityIput = document.querySelector("#city");
+      const UFIput = document.querySelector("#uf");
+
+      async function carregarCEP() {
+        const url = "https://viacep.com.br/ws/39430000/json";
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log(resposta);

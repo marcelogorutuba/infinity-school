@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mude o texto Sim ou Não</h1>
+    <label for="">Sim ou Não </label>
+    <input type="text" id="numero">
+
+    <button onclick="analisarPar()">Analisar</button>
+
+    <div id="resultado">
+        <p>Resultado</p>
+    </div>
+
+    <script>
+        let numero = document.querySelector("#numero")
+        let resultado = document.querySelector("#resultado")
+
+        function analisarPar(){
+            resultado.innerHTML = ""
+            let valor_numero = Number(numero.value )
+            console.log(valor_numero)
+            if(valor_numero % 2 == 0){
+                resultado.innerHTML += "Par"
+            }else{
+                resultado.innerHTML += "Impar"
+
+            }
+        }
+
+    </script>
+
+    
+</body>
+</html>
