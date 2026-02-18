@@ -1,0 +1,18 @@
+body { 
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    gap: 20px;
+}
+
+.divlink {
+    background-color: blueviolet;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de cadastro</title>
+  </head>
+  <body>
+    <h1>Seja bem-vindo!</h1>
+    <h4>Para iniciar faça o seu cadastro</h4>
+    <form>
+      <label for="Nome">Nome</label>
+      <br />
+      <input
+        type="text"
+        name="Nome"
+        placeholder="Digite o seu nome"
+        style="height: 12px"
+        required
+      />
+
+      <div style="margin-bottom: 10px"></div>
+
+      <label for="email">E-mail</label>
+      <br />
+      <input
+        type="email"
+        name="email"
+        id="E-mail"
+        placeholder="Email"
+        required
+      />
+
+      <div style="margin-bottom: 10px"></div>
+
+      <label for="senha">Senha</label>
+      <br />
+      <input
+        type="password"
+        name="senha"
+        id="senha"
+        placeholder="Digite sua senha"
+        required
+      />
+
+      <div style="margin-bottom: 10px"></div>
+
+      <label for="mensagem">Mensagem</label>
+      <br />
+      <textarea name="mensagem" id="Mensagem"></textarea>
+      <div style="margin-bottom: 10px"></div>
+      <button type="submit">Enviar</button>
+      <button type="reset">Apagar</button>
+    </form>
+  </body>
+</html>
