@@ -1,0 +1,15 @@
+Pessoa
+
+Cristiano Ronaldo
+- genero: Masculino
+- altura: 1,70
+- profissão: Jogador de Futebol
+- data de nascimento: 
+
+
+Metodos:
+- é lindo ()
+- fala ()
+- anda ()
+- respira () 
+ 
