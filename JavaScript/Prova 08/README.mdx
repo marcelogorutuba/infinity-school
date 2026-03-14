@@ -1,0 +1,54 @@
+OBJETOS LITERAIS EM JAVASCRIPT
+
+Em JavaScript, um objeto literal é uma forma simples de criar objetos utilizando
+chaves {}. Dentro dessas chaves podemos definir propriedades (dados) e métodos
+(funções) que pertencem ao objeto.
+
+Os objetos literais são muito utilizados para organizar informações relacionadas
+a uma mesma entidade. Por exemplo, um aluno pode ter um nome, um conjunto de notas
+e também métodos que executam ações relacionadas a esses dados.
+
+No exemplo abaixo, criamos um objeto chamado "aluno" que possui:
+
+- nome: uma propriedade do tipo string que guarda o nome do aluno.
+- notas: um array contendo números que representam as notas do aluno.
+- calcularMedia(): um método responsável por calcular a média das notas.
+
+Além disso, utilizamos dois recursos do JavaScript:
+
+1 - Desestruturação (Destructuring)
+Permite extrair valores específicos de um objeto de forma simples.
+
+2 - Spread Operator (...)
+Permite copiar e expandir elementos de um array, possibilitando adicionar
+novos valores sem alterar o array original.
+
+
+Criação do objeto literal:
+
+
+const aluno = {
+  nome: "João",
+  notas: [8, 7.5, 9, 6],
+
+  calcularMedia() {
+    const soma = this.notas.reduce((total, nota) => total + nota, 0);
+    return soma / this.notas.length;
+  }
+};
+
+
+Usando desestruturação para acessar o nome do aluno
+const { nome } = aluno;
+
+console.log("Nome do aluno:", nome);
+
+
+Usando o spread operator para adicionar uma nova nota
+const notasAtualizadas = [...aluno.notas, 10];
+
+console.log("Notas atualizadas:", notasAtualizadas);
+
+
+Calculando a média das notas
+console.log("Média das notas:", aluno.calcularMedia());
