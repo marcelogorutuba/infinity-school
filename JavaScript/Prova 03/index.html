@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sistema de Cadastro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Cadastro de Nomes</h1>
+
+      <div class="input-area">
+        <input type="text" id="nomeInput" placeholder="Digite um nome" />
+        <button onclick="adicionarNome()">Adicionar</button>
+        <button class="finalizar" onclick="finalizarCadastro()">
+          Finalizar
+        </button>
+      </div>
+
+      <div class="listas">
+        <div class="box">
+          <h2>Lista com Índice</h2>
+          <ul id="listaIndice"></ul>
+        </div>
+
+        <div class="box">
+          <h2>Mensagens de Boas-Vindas</h2>
+          <ul id="listaBoasVindas"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
