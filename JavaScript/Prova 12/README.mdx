@@ -1,0 +1,40 @@
+[JSIA-A12]
+
+Desenvolva uma aplicação simples de Gerenciador de Notas utilizando Local Storage.
+
+O programa deve permitir adicionar, listar e excluir notas, armazenando os dados de forma persistente no navegador.
+
+Requisitos do Projeto:
+
+a - Interface HTML Inicial:
+- Crie um campo de texto para o título da nota.
+- Adicione um botão "Adicionar Nota".
+- Crie uma lista para exibir as notas armazenadas.
+
+b - Adição de Notas:
+- Ao clicar no botão "Adicionar Nota":
+  • Leia o valor do campo de texto (título da nota).
+  • Armazene a nota como um objeto no Local Storage.
+  • Cada nota deve possuir um título único.
+- Após adicionar a nota:
+  • Atualize a lista exibida na tela.
+  • Mostre o título da nota e um botão "Remover".
+
+c - Listar Notas:
+- Utilize o Local Storage para recuperar as notas armazenadas.
+- Converta os dados recuperados novamente para objetos JavaScript.
+- Exiba as notas em uma lista.
+- Cada item da lista deve mostrar:
+  • O título da nota
+  • Um botão "Remover" ao lado da nota.
+
+d - Remover Notas:
+- Ao clicar no botão "Remover":
+  • A nota correspondente deve ser removida do Local Storage.
+  • A lista exibida na tela deve ser atualizada removendo a nota excluída.
+
+e - Armazenamento no Local Storage:
+- Salve as notas no Local Storage.
+- Carregue as notas armazenadas ao iniciar a aplicação.
+- Armazene objetos como strings no Local Storage.
+- Recupere os dados do Local Storage e converta-os novamente para objetos JavaScript.
