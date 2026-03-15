@@ -1,0 +1,37 @@
+[JSIA-A11]
+
+Desenvolva uma aplicação web simples utilizando Eventos DOM, atribuição de eventos e o método preventDefault() para gerenciar a interação com um formulário.
+
+O projeto permitirá que o usuário preencha e envie informações sem recarregar a página, validando os dados antes do seu envio.
+
+Requisitos do Projeto:
+
+a - Estrutura do Formulário:
+O formulário deve conter os seguintes elementos:
+- Um campo de texto para nome de usuário.
+- Um campo de texto para senha.
+- Um campo para telefone.
+- Um campo para data de nascimento.
+- Um campo de e-mail.
+- Um botão para envio.
+
+b - Atribuir Eventos ao Formulário:
+- Utilize o método addEventListener() para detectar o evento de envio do formulário (submit).
+
+c - Prevenindo o Comportamento Padrão:
+- No evento de envio do formulário, utilize o método preventDefault() para impedir que a página seja recarregada ao enviar o formulário.
+
+d - Validação Simples:
+- Verifique se todos os campos estão preenchidos.
+- Caso algum campo esteja vazio, exiba uma mensagem de erro no console e não permita o envio.
+- Utilize o atributo "type" correspondente para cada tipo de dado inserido (exemplo: email, date, tel, password, etc.).
+
+e - Adicionando Informações Dinamicamente:
+- Caso os dados sejam válidos, crie um novo elemento HTML contendo os dados preenchidos pelo usuário.
+- Utilize o método createElement() para criar os elementos dinamicamente.
+- Utilize appendChild() para adicioná-los a uma lista exibida na página.
+
+f - Botão de Reset:
+- Adicione um botão chamado "Limpar Lista".
+- Ao clicar nesse botão, todos os elementos adicionados à lista devem ser removidos.
+- Utilize o método innerHTML = "" para limpar completamente a lista.
